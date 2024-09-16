@@ -1,10 +1,8 @@
-A = input().split(" ")
+from itertools import product
 
-B = input().split(" ")
+A = map(int,input().split(" "))
 
-AxB = []
-for i in A:
-    for j in B:
-        AxB.append((int(i),int(j)))
+B = map(int,input().split(" "))
 
+AxB = list(product(A,B))
 print(*AxB)
